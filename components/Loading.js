@@ -1,15 +1,15 @@
-import { Circle } from "better-react-spinkit";
+import { css } from "@emotion/core";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+`;
+
 const Loading = () => {
   return (
     <center style={{ display: "grid", placeItems: "center", height: "100vh" }}>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png"
-        alt="Loading"
-        // server side CSS => inline css
-        height={200}
-        style={{ marginBottom: 10 }}
-      />
-      <Circle color="#3CBC28" size={60} />
+      <ClimbingBoxLoader color="#36D7B7" css={override} size={40} />
     </center>
   );
 };
